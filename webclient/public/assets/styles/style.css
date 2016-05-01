@@ -1,0 +1,372 @@
+html, body{
+	width: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:12px;
+	color:#333;
+	line-height: 1.42;
+	margin:0px;
+	background-color:white;
+	overflow-x:hidden;
+}
+body.glue{
+	overflow: hidden;
+}
+
+*{
+	box-sizing:border-box;
+}
+
+@font-face {
+	font-family: 'sofia_prolight';
+	src: url('../fonts/sofia/SofiaProLight-webfont.eot');
+	src: url('../fonts/sofia/SofiaProLight-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/sofia/SofiaProLight-webfont.woff2') format('woff2'),
+	url('../fonts/sofia/SofiaProLight-webfont.woff') format('woff'),
+	url('../fonts/sofia/SofiaProLight-webfont.ttf') format('truetype'),
+	url('../fonts/sofia/SofiaProLight-webfont.svg#sofia_prolight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gloria_Hallelujah';
+	src: url('../fonts/GloriaHallelujah.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+pre{
+	border-radius:4px;
+	padding: 10px 5px 10px 40px !important;
+	font-family: sofia_prolight !important;
+	font-size:13px;
+	position:relative;
+	text-align: left;
+}
+
+pre.code .head{
+	position:absolute;
+	right:10px;
+	top:10px;
+	color:#75715E;
+}
+
+pre.code.js .hljs-built_in{
+	color:white;
+}
+
+
+.view {
+	-webkit-animation: fadein 0.9s;
+	-moz-animation: fadein 0.9s;
+	-ms-animation: fadein 0.9s;
+	-o-animation: fadein 0.9s;
+	animation: fadein 0.9s;
+}
+
+@-moz-keyframes fadein {
+	from { opacity:0; }
+	to { opacity:1; }
+}
+@-webkit-keyframes fadein {
+	from { opacity:0; }
+	to { opacity:1; }
+}
+@keyframes fadein {
+	from { opacity:0; }
+	to { opacity:1; }
+}
+
+@-moz-keyframes fadeout {
+	from { opacity:1; }
+	to { opacity:0; }
+}
+@-webkit-keyframes fadeout {
+	from { opacity:1; }
+	to { opacity:0; }
+}
+@keyframes fadeout {
+	from { opacity:1; }
+	to { opacity:0; }
+}
+
+select:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #000;
+}
+
+:focus {outline:0 !important;}
+::-moz-focus-inner {border:0 !important;}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: 500;
+	line-height: 1em;
+	margin:0px;
+	display:inline;
+}
+
+.hlight, .hlight:hover{
+	color:#E36663;
+}
+
+.fa-power-off{
+	cursor:pointer;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.ptr{
+	cursor:pointer;
+}
+
+.background-cover{
+	background-size:cover;
+	background-position:top center;
+	background-repeat: no-repeat;
+}
+
+
+ul{
+	padding:0px;
+	margin:0px;
+}
+
+li{
+	list-style: none;
+}
+
+img{
+	max-width:100%;
+	max-height:100%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.mg0{
+	margin:0px !important;
+}
+
+.ctv-help {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.ctv{
+	display:inline-block !important;
+	vertical-align: middle !important;
+	max-height:100%;
+	overflow:hidden;
+	position:relative;
+}
+.ctv-center{
+	text-align: center;
+}
+
+.container-lg{
+	max-width:1000px;
+	margin:auto;
+}
+
+.container-md{
+	max-width: 720px;
+	margin:auto;
+}
+.container-sm{
+	max-width: 500px;
+	margin:auto;
+}
+
+textarea{
+	resize:none;
+}
+
+.align-block{
+	display:inline-block;
+	vertical-align: top;
+}
+
+.float-right{
+	float:right;
+}
+
+.float-left{
+	float:left;
+}
+
+.success-banner{
+	color: rgb(100, 182, 100);
+	font-size: 18px;
+	background-color: rgb(211, 252, 205);
+	padding: 5px 10px;
+	margin: 5px 0px;
+	border: 1px solid rgb(163, 224, 163);
+	border-radius: 4px;
+}
+
+.sm-icon{
+	width:35px;
+	height:35px;
+	background-repeat: no-repeat;
+	background-size:35px;
+	display:inline-block;
+}
+
+._fade{
+	opacity:0;
+	-webkit-transition:opacity linear 0.3s;
+	-moz-transition: opacity linear 0.3s;
+	-o-transition: opacity linear 0.3s;
+	-ms-transition: opacity linear 0.3s;
+	transition:opacity linear 0.3s;
+}
+._fade.show{
+	opacity:1!important;
+}
+
+.home .body-container {
+	max-width: 800px;
+	width:100%;
+	margin: auto;
+	padding: 20px 20px;
+}
+
+.home ul li.pair div {
+	background-color:#f0f0f0;
+}
+
+.home ul li {
+	font-family: "sofia_prolight";
+	cursor:pointer;
+}
+
+.home ul li div {
+	padding:5px 5px 5px 5px;
+}
+
+.home ul li:hover div.title{
+	background-color: rgb(254, 213, 196);
+}
+
+.home ul li div.description {
+	height:auto;
+	overflow: hidden;
+	opacity:0;
+	padding:0px 5px;
+	max-height:0px;
+	-webkit-transition:all linear 0.3s;
+	-moz-transition: all linear 0.3s;
+	-o-transition: all linear 0.3s;
+	-ms-transition: all linear 0.3s;
+	transition:all linear 0.3s;
+}
+
+.home ul li.active div.description {
+	max-height:500px;
+	opacity:1;
+	padding:5px;
+}
+
+.home .header {
+	padding:5px 0px;
+}
+
+.home .search-bar {
+	text-align: center;
+	width: 100%;
+	margin: auto;
+}
+
+.home .header input {
+	margin:0px;
+	margin-top:5px;
+}
+
+.home input {
+	width:100%;
+	border: 1px solid rgb(219, 219, 219);
+	border-radius: 2px;
+	padding: 0px 5px;
+	font-family: "sofia_prolight";
+	line-height: 26px;
+	margin:5px 0px;
+}
+
+.home button {
+	background-color: rgb(255, 153, 131);
+	border: medium none;
+	line-height: 26px;
+	padding: 0px 5px;
+	color: white;
+	border-radius: 2px;
+	cursor:pointer;
+}
+
+.home button:hover {
+	background-color: rgb(248, 122, 94);
+}
+
+	/* ********* Media query ********* */
+
+	/* lg srcn */
+	@media only screen and (min-width:1200px) {
+		/*.view {
+			border-top:3px solid #E73BBA; /* rose 
+			}*/
+			.xl-hide{
+				display:none !important;
+			}
+		}
+
+	/* 
+	md Desktop : 992 - 1200px;
+	*/
+	@media only screen and (max-width:1200px) {
+		/*.view {
+			border-top:3px solid #3B92E7; /* blue 
+			}*/
+			.lg-hide{
+				display:none !important;
+			}
+		}
+
+		/* sm landscape */
+		@media only screen and (max-width:1024px) {
+
+		/*.view {
+			border-top:3px solid #10D210; /* green 
+			}*/
+		}
+
+		/* match xs landscape && sm portrait */
+		@media only screen and (max-width:768px) {
+			/*.view {
+				border-top:3px solid #D29210; /* orange 
+				}*/
+			}
+
+			/* sm portrait & landscape : 768px = portrait width mais match pr 2 orientations */
+			@media only screen and (max-device-width:768px) {
+
+			}
+
+			@media only screen and (max-width:480px) {
+			/*.view {
+				border-top:3px solid #D22510; /* red 
+				}*/
+				
+			}
+
+			/* xs portrait & landscape device only */
+			@media only screen and (max-device-width:480px){
+			}

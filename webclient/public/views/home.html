@@ -1,0 +1,28 @@
+<div data-ng-app="app.home" class="home" >
+	<div class="body-container">
+		<div class="header">
+			<button type="text" ng-click="showAdd = true; showOpen = false;">Ajouter un flux</button>
+			<button type="text" ng-click="showOpen = true; showAdd = false;">Ouvrir</button>
+			<form ng-show="showAdd">
+				<input type="text" placeholder="Name" ng-model="fluxName"/>
+				<input type="text" placeholder="Url" ng-model="fluxUrl"/>
+				<button type="text" style="margin-top:5px;" ng-click="Home.saveflux(fluxName, fluxUrl)">Sauvegarder</button>
+			</form>
+			<form ng-show="showOpen">
+				<input type="text" placeholder="Name" ng-enter="Home.openflux(fluxName);" ng-model="fluxName"/>
+			</form>
+			<div style="color:red;" ng-show="Home.err">{{Home.err}}</div>
+		</div>
+		<div class="search-bar">
+				<input type="text" placeholder="Rechercher" ng-model="filterModel"/>
+			</div>
+		<ul>
+			<li data-ng-repeat="object in Home.data | filter:filterModel" ng-class="{'pair':$index % 2 == 0, 'active':Home.isActive($index)}" ng-click="Home.switchActive($index);">
+				<div class="title">{{object.title}} - <span><a href="{{object.authors[0].link}}">{{object.authors[0].name}}</a></span></div>
+				<div class="description">
+					{{object.description}}
+				</div>
+			</li>
+		</div>
+	</div>
+</div>
